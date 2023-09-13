@@ -12,6 +12,91 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carosello Mono Array</title>
 </head>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+}
+.relative {
+  position: relative;
+}
+
+.debug {
+  background-color: rgb(238, 170, 170);
+  border: 1px solid black;
+  min-height: 50px;
+}
+
+.hide {
+  display: none;
+}
+
+.main-wrapper {
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.row-container {
+  display: flex;
+  width: 100%;
+  height: 70%;
+  margin: auto;
+}
+
+.thumb {
+  width: 100%;
+  height: 20%;
+}
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.items-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.items-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.btn {
+  width: 40px;
+  height: 40px;
+  padding: 3px;
+  color: lightgray;
+  font-size: 22px;
+  background-color: rgba(0, 0, 0, .7);
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.btn.top { 
+  top: 5px;
+}
+.btn.bottom {
+  bottom: 5px;
+}
+
+.active {
+  border: 4px solid white;
+  opacity: 0.8;
+}
+</style>
 <body>
   <div class="main-wrapper">
     <div class="container d-flex justify-content-center align-items-center ">

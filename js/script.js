@@ -1,5 +1,3 @@
-
-
 const photos = [
   'img/01.webp',
   'img/02.webp',
@@ -11,7 +9,6 @@ const photos = [
 
 const btnNext = document.getElementById('btn-t');
 const btnPrev = document.getElementById('btn-b');
-
 const itemsWrap = document.querySelector('.items-wrapper');
 
 
@@ -21,6 +18,7 @@ btnPrev.classList.add('hide');
 
 // reset 
 itemsWrap.innerHTML = '';
+
 
 
 
@@ -45,28 +43,32 @@ btnNext.addEventListener('click', function(){
   thumbCollection[counterImg].classList.remove('active');
   
   counterImg++;
+
+  if(counterImg === itemCollection.length) {
+    counterImg = 0;
+  }
+
   itemCollection[counterImg].classList.remove('hide');
   thumbCollection[counterImg].classList.add('active');
   btnPrev.classList.remove('hide');
 
-  if(counterImg  === itemCollection.length - 1) {
-    btnNext.classList.add('hide');
-  }
- 
-
 });
+
 
 // botton prev 
 btnPrev.addEventListener('click', function () {
   itemCollection[counterImg].classList.add('hide');
   thumbCollection[counterImg].classList.remove('active');
+
   counterImg--;
+
+  if(counterImg < 0) {
+    counterImg = itemCollection.length - 1;
+  }
+
   itemCollection[counterImg].classList.remove('hide');
   thumbCollection[counterImg].classList.add('active');
-  btnNext.classList.remove('hide');
-  if(counterImg  === 0) {
-    btnPrev.classList.add('hide');
-  }
+  btnNext.classList.remove('hide'); 
  
 });
 
