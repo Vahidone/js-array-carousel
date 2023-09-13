@@ -12,6 +12,9 @@ const btnPrev = document.getElementById('btn-b');
 const btnNext = document.getElementById('btn-t');
 const itemsWrap = document.querySelector('.items-wrapper');
 
+btnPrev.classList.add('hide');
+
+
 // reset 
 itemsWrap.innerHTML= '';
 let counterImg = 0;
@@ -28,8 +31,15 @@ itemCollection[0].classList.remove('hide');
 // botton next 
 btnNext.addEventListener('click', function(){
   itemCollection[counterImg].classList.add('hide');
+  
   counterImg++;
   itemCollection[counterImg].classList.remove('hide');
+  btnPrev.classList.remove('hide');
+
+  if(counterImg  === itemCollection.length - 1) {
+    btnNext.classList.add('hide');
+  }
+
 });
 
 // botton prev 
@@ -37,6 +47,7 @@ btnPrev.addEventListener('click', function () {
   itemCollection[counterImg].classList.add('hide');
   counterImg--;
   itemCollection[counterImg].classList.remove('hide');
+ 
 });
 
 
