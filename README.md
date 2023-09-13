@@ -17,4 +17,12 @@ Al click dell’utente sulle frecce, il programma cambierà l’immagine attiva,
 
 
 1. per prima cosa faccio la struttura di html contenente un carosello come lo screenshot.
-2. 
+2. faccio array delle immagini in js.
+3. faccio delle variabili per dichiarare i bottoni e il slider-wrapper.
+4. faccio un ciclo for per array delle immagini.
+5. prendo tutti le classi item e le salvo in un array.
+6. tolgo classe hide al primo elemento.
+7. al click di next faccio sparire item corrente e faccio apparire il prossimo item.
+8. faccio la stessa cosa del punto 7 per il bottone prev.(al contrario)
+9. nascondo il bottone prev dopo il primo item.
+10. nascondo il bottone next all'ultimo item.
