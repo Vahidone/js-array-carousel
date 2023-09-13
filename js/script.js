@@ -39,6 +39,7 @@ btnNext.addEventListener('click', function(){
   if(counterImg  === itemCollection.length - 1) {
     btnNext.classList.add('hide');
   }
+ 
 
 });
 
@@ -47,6 +48,10 @@ btnPrev.addEventListener('click', function () {
   itemCollection[counterImg].classList.add('hide');
   counterImg--;
   itemCollection[counterImg].classList.remove('hide');
+  btnNext.classList.remove('hide');
+  if(counterImg  === 0) {
+    btnPrev.classList.add('hide');
+  }
  
 });
 
