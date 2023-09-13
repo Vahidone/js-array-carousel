@@ -8,8 +8,8 @@ const photos = [
   'img/05.webp'
 ];
 
-const btnPrev = document.getElementById('btn-b');
-const btnNext = document.getElementById('btn-t');
+const btnPrev = document.getElementById('btn-t');
+const btnNext = document.getElementById('btn-b');
 const itemsWrap = document.querySelector('.items-wrapper');
 
 
