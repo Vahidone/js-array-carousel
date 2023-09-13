@@ -8,9 +8,12 @@ const photos = [
   'img/05.webp'
 ];
 
-const btnPrev = document.getElementById('btn-t');
-const btnNext = document.getElementById('btn-b');
+
+const btnNext = document.getElementById('btn-t');
+const btnPrev = document.getElementById('btn-b');
+
 const itemsWrap = document.querySelector('.items-wrapper');
+
 
 
 btnPrev.classList.add('hide');
@@ -21,11 +24,13 @@ itemsWrap.innerHTML = '';
 
 
 
+
 let counterImg = 0;
 
 for (let i = 0; i < photos.length; i++) {
   const photo = photos[i];
   itemsWrap.innerHTML += `<img src="${photo}" class="item hide">`;
+  
 }
 
 const itemCollection = document.getElementsByClassName('item');
