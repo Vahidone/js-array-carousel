@@ -12,11 +12,15 @@ const btnPrev = document.getElementById('btn-b');
 const btnNext = document.getElementById('btn-t');
 const itemsWrap = document.querySelector('.items-wrapper');
 
+
 btnPrev.classList.add('hide');
 
 
 // reset 
-itemsWrap.innerHTML= '';
+itemsWrap.innerHTML = '';
+
+
+
 let counterImg = 0;
 
 for (let i = 0; i < photos.length; i++) {
@@ -25,15 +29,19 @@ for (let i = 0; i < photos.length; i++) {
 }
 
 const itemCollection = document.getElementsByClassName('item');
+const thumbCollection = document.getElementsByClassName('thumb');
 
 itemCollection[0].classList.remove('hide');
+thumbCollection[0].classList.add('active');
 
 // botton next 
 btnNext.addEventListener('click', function(){
   itemCollection[counterImg].classList.add('hide');
+  thumbCollection[counterImg].classList.remove('active');
   
   counterImg++;
   itemCollection[counterImg].classList.remove('hide');
+  thumbCollection[counterImg].classList.add('active');
   btnPrev.classList.remove('hide');
 
   if(counterImg  === itemCollection.length - 1) {
@@ -46,8 +54,10 @@ btnNext.addEventListener('click', function(){
 // botton prev 
 btnPrev.addEventListener('click', function () {
   itemCollection[counterImg].classList.add('hide');
+  thumbCollection[counterImg].classList.remove('active');
   counterImg--;
   itemCollection[counterImg].classList.remove('hide');
+  thumbCollection[counterImg].classList.add('active');
   btnNext.classList.remove('hide');
   if(counterImg  === 0) {
     btnPrev.classList.add('hide');
