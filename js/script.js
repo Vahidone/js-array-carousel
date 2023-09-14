@@ -22,7 +22,6 @@ itemsWrap.innerHTML = '';
 
 
 
-
 let counterImg = 0;
 
 for (let i = 0; i < photos.length; i++) {
