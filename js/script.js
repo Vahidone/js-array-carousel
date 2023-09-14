@@ -13,7 +13,7 @@ const itemsWrap = document.querySelector('.items-wrapper');
 
 
 
-btnPrev.classList.add('hide');
+
 
 
 // reset 
